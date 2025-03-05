@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./header/Header";
+import Header from "./../header/Header";
 import Home from "./home/Home";
 import Categories from "./categories/Categories";
 import AllProducts from "./products/AllProducts";
