@@ -21,7 +21,7 @@
     
     #logo {
         height: 70px;
-        padding-left: 40px;
+        padding-left: 20px;
 
         @media (max-width: 480px) {
             width: 44px;
@@ -106,9 +106,15 @@
             }
     }
 }
+.cart_burger {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 20px;
+}
 
     .numer_cart {
-        padding-right: 40px;
+        margin-left: 20px;
         position: relative;
 
         @media (max-width: 480px) {
@@ -131,7 +137,7 @@
         .cart_count {
             position: absolute; 
             top: 5px; 
-            right: 70px; 
+            right: 30px; 
             background-color: rgba(146, 161, 52, 1);
             color: white; 
             border-radius: 50%; 
@@ -159,7 +165,7 @@
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
-            padding-top: 10px;
+            padding-top: 8px;
             position: relative;
             z-index: 1001;
             
