@@ -44,9 +44,12 @@ import "./header.scss";
             </div>
             <div className='cart_burger'>
                 <div className='numer_cart'>
-                    <img id='cart' src={imgCart} alt="cart" />
-                    {cartCount > 0 && ( // Условный рендеринг кружочка
-                        <div className="cart_count">{cartCount}</div>)}
+                    <Link to="/cart"> 
+                        <img id='cart' src={imgCart} alt="cart" />
+                        {cartCount > 0 && ( 
+                            <div className="cart_count">{cartCount}</div>
+                        )}
+                    </Link>
                 </div> 
                     {/* Бургер-меню */}
                 <div className={`burger_menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
