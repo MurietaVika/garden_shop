@@ -10,7 +10,7 @@ const Product = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://localhost:3333/products/${id}`);
+                const response = await fetch(`http://localhost:3333/products/all/${id}`);
                 const data = await response.json();
                 setItem(data);
             } catch (error) {
@@ -22,10 +22,6 @@ const Product = () => {
 
         fetchProduct();
     }, [id]);
-
-    if (loading) {
-        return <p>Loading...</p>;
-    }
 
     if (!item) {
         return <p>Product not found</p>;

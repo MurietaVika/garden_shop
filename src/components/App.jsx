@@ -11,7 +11,7 @@ import Nav from './../nav/Nav';
 import Footer from "./../footer/Footer";
 import "./app.scss";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Category from "./category/Category";
 
 const App = () => {
   return (
@@ -21,7 +21,8 @@ const App = () => {
           <Nav />  
               <Routes> 
                   <Route path="/" index element={<Home/>} />
-                  <Route path="/categories" element={<Categories />} /> 
+                  <Route path="/categories" element={<Categories />} />  
+                  <Route path="/categories/:id" element={<Category />} />  // useParams
                   <Route path="/products" element={<AllProducts />} />
                   <Route path="/product" element={<Product />} /> 
                   <Route path="/cart" element={<Cart />} />

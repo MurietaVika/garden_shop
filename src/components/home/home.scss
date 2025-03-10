@@ -1,44 +1,34 @@
-.Home {
-    @media (max-width: 1000px) {
-        .Home {
-          width: 100%;
-        }
-      }
-      
-}
-
 .banner{
-    width: 1440;
-    height: 600;
-    top: 128px;
+    width: 100%;
+    height: 600px;
     display: flex;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 
 .bannerImg{
-    width: 1440;
-    height: 600;
+    width: 100%;
+    height: 600px;
     top: 128px;
-    background: #00000066;    
+    background: #00000066;
 }
 
-.bannerText{
-    position: absolute;
-    display: flex;
-    top: 208px; /* Центрирование по вертикали */
-    left: 20px; /* Центрирование по горизонтали */
-    transform: translate(-0%, 60%); /* Смещение обратно на 50% ширины/высоты */
-    color: white; /* Белый текст */
-    font-size: 80px;
-    font-weight: bold;
-    gap: 40px;
-    padding: 7px 10px;
-    border-radius: 4px;
-    height: 310px;
-    width: 1360px;
-}
-
-.buttonCheck{
+    .bannerText{
+        position: absolute;
+        display: flex;
+        top: 208px; /* Центрирование по вертикали */
+        left: 20px; /* Центрирование по горизонтали */
+        transform: translate(-0%, 60%); /* Смещение обратно на 50% ширины/высоты */
+        color: white; /* Белый текст */
+        font-size: 80px;
+        font-weight: bold;
+        gap: 40px;
+        padding: 7px 10px;
+        border-radius: 4px;
+        height: 310px;
+        width: 1360px;
+    
+    }
+    .buttonCheck{
     width: 218px;
     height: 58px;
     border-radius: radius small;
@@ -52,113 +42,254 @@
     left:  20px;
     top: 208px;
     color: white;
-}
-
-.buttonCheck.text{
+    
+    }
+    .buttonCheck.text{
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
-    letter-spacing: 0%;
-    text-align: center; 
-}
-
-.containerCategories{
-    width: 1360;
-    height: 528;
-    top: 808px;
+    text-align: center;
+    
+    }
+    .containerCategories{
+    width: 1360px;
+    height: 528px;
     left: 40px;
     gap: 40px;
-}
-
-.category{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    
+    }
+    .category{
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 64px;
     line-height: 70px;
+    }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        gap: 20px; // Расстояние между заголовком и линией
+      }
+      
+      .line-box {
+        display: flex;
+        align-items: center;
+        flex-grow: 1; // Линия растягивается на оставшееся пространство
+      }
+      
+      .line {
+        width: 825px; 
+        height: 2px;
+        background-color: rgba(221, 221, 221, 1);
+        border: none;
+      }
+      
+      .line-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 126%;
+        text-align: center;
+        color: #8B8B8B;
+        width: 142px;
+        height: 36px;
+        border: 1px solid #DDDDDD;
+        background-color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+ 
+.ImgCategory{
+    width: 980px;
+    height: 318px;
+    gap: 50px;
+    display: flex;
+    position: relative;
+    top: -40px;
+}
+.img-container{
+    width: 325px;
+    height: 392px;
+    gap: 18px;
 }
 
-.line{
-    border: 1px;
-    width: 825px;
-    background-color: gray;
-    margin: 20px 0;
-    top: 808px;
-    left: 40px;    
-}
-
+.img{
+    width: 316px;
+    height: 350px;
+}      
+      
+      
+    
 .discount{
     width: 1360px;
     height: 486px;
-    top: 1416px;
-    left: 40px;
-    padding-top: 32px;
-    padding-right: 32px;
-    padding-left: 32px;
-    gap: 24px;
-    background: linear-gradient(261.47deg, #0B710B 32.63%, #339933 98.96%);
+    background: linear-gradient(to top right, rgba(135, 147, 61, 1), rgba(85, 97, 11, 1));
+    margin-top: 120px;
+    margin-left: 40px;
 }
 
-.text{
-    font-family: 'Montserrat';
+    .text{
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 64px;
-    line-height: 70.4px;
-    letter-spacing: 0%;
+    line-height: 70px;
     text-align: center;
     color: white;
-    width: 1296;
-    height: 70;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+
+    .discount-content {
+        display: flex;
+        flex-direction: row;
+        width: 1296px;
+        height: 360px;
+        padding-top: 20px;
 }
 
-.discountProduct{
-    width: 748px;
-    height: 360px;
-    position: absolute;
-    left:  50%;
-    transform: translateX(-135%);
-    bottom: -1040px;
+    .discount-image{
+        height: 360px;
+        padding-top: 35px;
 }
 
-.form{
-    width: 516px;
-    height: 350px;
+        .discount-form{
+            width: 516px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* Расстояние между полями */
+            border-radius: 8px; /* Закругление краёв */
+            
+        }
+        .input{
+            height: 58px;
+            padding: 15px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 30px;
+            color:white;
+            background: transparent;
+            outline: none;
+            gap: 10px;
+            box-sizing: content-box;
+    
+        }
+        input::placeholder {
+            color: white;
+            opacity: 0.7;
+          }
+        
+          button {
+            height: 58px;
+            background: #fff;
+            color: black;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+        
+          button:hover {
+            background: gray;
+          }
+
+     .t{
+      font-family: Montserrat;
+      font-weight: 500px;
+      font-size: 20px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      text-align: center;
+      
+     }
+     .sale{
+      width: 1360px;
+    height: 532px;
+    top: 1982px;
+    left: 40px;
+    gap: 40px;
+    
+     }
+     .Sale{
+    font-family: Montserrat;
+    font-weight: 700px;
+    font-size: 64px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    
+     }
+     .line2{
+     position: relative;
+    top: -90px;
+    width: 80%;
+    margin-right: 70px;
+       }
+    .ImgSale{
+    width: 1350px;
+    height: 422px;
+    gap: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 16px; /* Расстояние между полями */
-    padding: 15px  850px;
-    border-radius: 8px; /* Закругление краёв */            
-}
-
-.input{
-    height: 70px !important;
-    padding: 15px;
-    border: 2px solid green;
-    border-radius: 8px;
-    font-size: 30px;
-    color: green;
-    background: transparent;
-    outline: none;
-    gap: 10px;
-    box-sizing: content-box; 
-}
-
-input::placeholder {
-    color: red;
-    opacity: 0.7;
-}
-        
-button {
-    height: 48px;
-    background: #fff;
-    color: black;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-        
-button:hover {
-    background: gray;
-}
+    position: relative;
+    top: -100px;
+    }
+    .price{
+    width: 252px;
+    height: 44px;
+    gap: 16px;
+    text-align: center;
+    
+    
+    }
+    .text-sale{
+    font-family: Montserrat;
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    color: #424436;
+    text-align: center;
+    
+    }
+    .img2{
+    width: 316px;
+    height: 284px;
+    border-bottom-width: 1px;
+    
+    }
+    .sale-container{
+      width: 316px;
+      height: 422px;
+      gap: 20px;
+      border-radius: radius big;
+      border-width: 1px;
+      
+    }
+    .discount-price{
+      font-family: Montserrat;
+    font-weight: 500px;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-decoration: line-through;
+    color: #8B8B8B;
+    position: relative;
+    top: -40px;
+    left:  70px;
+    
+    }
+    .price1{
+     font-family: Montserrat;
+    font-weight: 600px;
+    font-size: 40px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+    
+    }

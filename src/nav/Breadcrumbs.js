@@ -11,10 +11,13 @@ const Breadcrumbs = () => {
         return null; // Не показываем крошки на главной
     }
 
+    let pathAccumulate = ''; // Накапливаем путь для каждой части
+
     return (
         <nav className="breadcrumbs">
             <Link to="/" className="breadcrumb-button">Main page</Link>
             {pathnames.map((name, index) => {
+                pathAccumulate += `/${name}`;
                 const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
                 return (
                     <span key={index}>
@@ -27,3 +30,9 @@ const Breadcrumbs = () => {
 };
 
 export default Breadcrumbs;
+
+
+
+
+
+
