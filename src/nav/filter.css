@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Для Firefox */
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter__price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter__price h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: rgb(66, 68, 54);
+}
+
+.filter__price input {
+  width: 112px;
+  height: 36px;
+  padding: 8px 16px;
+  border: 1px solid rgb(221, 221, 221);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #333;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: rgb(139, 139, 139);
+  font-size: 16px;
+}
+
+.filter__discount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  color: rgb(66, 68, 54);
+}
+
+.filter__sort {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter__sort label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(66, 68, 54);
+  line-height: 130%;
+}
+
+.filter__sort-btn {
+  width: 200px;
+  height: 36px;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 8px 16px;
+  background-color: white;
+  color: rgb(221, 221, 221);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 126%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__sort-btn:hover {
+  background-color: rgba(221, 221, 221, 0.5);
+}
+
+/*# sourceMappingURL=filter.css.map */
