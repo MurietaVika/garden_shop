@@ -1,132 +1,205 @@
-.product {
-  font-family: 'Montserrat', sans-serif;
+.product_solo {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
-.product__item {
+.product__image-container {
+  max-width: 50%;
 
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 780px;
+
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 90%;
+  }
 }
 
-.product__image img {
-  width: 100%;
-  height: auto;
-}
 
-.product__details {
-display: flex;
+
+.product__content {
+  display: flex;
   flex-direction: column;
   gap: 50px;
+  width: 50%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    gap: 30px;
+  }
 }
 
-.product__info strong {
-  font-weight: 700;
+.product__header strong {
   font-size: 40px;
-  line-height: 110%;
-  text-align: start;
 
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 }
-.product__price {
-  width: 359px;
-  height: 70px;
 
+.product__price {
+  padding: 32px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
 }
 
 .new-price {
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 64px;
   color: rgba(66, 68, 54, 1);
+
+  @media (max-width: 768px) {
+    font-size: 56px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 40px;
+  }
 }
 
 .old-price {
+  font-weight: 500;
+  font-size: 40px;
   text-decoration: line-through;
-  color: gray;
-  margin-left: 10px;
+  color: rgba(139, 139, 139, 1);
+  padding-left: 20px;
+  padding-top: 22px;
 }
 
+.discount_badge {
+  background: rgba(242, 109, 34, 1);
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 4px 8px;
+  text-align: center;
+  margin-left: 10px;
 
-.product__controls {
+  @media (max-width: 1024px) {
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    padding: 3px 6px;
+  }
+}
+
+.product__actions {
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-.product__quantity-btn {
+.product__quantity-controls {
   width: 200px;
   height: 58px;
+  font-size: 24px;
   justify-content: space-between;
   border-radius: 5px;
   border: 1px solid rgba(221, 221, 221, 1);
-}
-.product__quantity-btn {
   display: flex;
   align-items: center;
-  width: 200px; // Увеличим ширину
-  height: 58px; // Увеличим высоту
-  font-size: 24px; // Увеличим размер шрифта
-  border-radius: 5px;
-  border: 1px solid rgba(221, 221, 221, 1);
+
+  @media (max-width: 480px) {
+    width: 150px;
+    height: 48px;
+    font-size: 18px;
+  }
 }
 
-.product__minus,
-.product__plus {
-  width: 58px; // Задаём одинаковый размер для кнопок
+.product__decrease-btn,
+.product__increase-btn {
+  width: 58px;
   height: 58px;
-  font-size: 30px; // Увеличиваем шрифт
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid rgba(221, 221, 221, 1);
+  background: none;
+
+  @media (max-width: 480px) {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
 }
 
-.product__add-to-cart-btn {
-  width: 316px;
-  height: 58px;
-  gap: 10px;
-  border-radius: 5px;
+.product__cart-btn {
   padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 5px;
   background-color: rgba(146, 161, 52, 1);
   font-weight: 600;
-  font-size: 20px;
-  line-height: 130%;
   text-align: center;
   vertical-align: middle;
   color: white;
+  border: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+  }
 }
 
-.product__description {
-  width: 548px;
-  height: 306px;
-}
+.product__text {
+  strong {
+    font-size: 20px;
+    color: rgba(66, 68, 54, 1);
+    font-weight: 600;
 
-.product__description button {
-  cursor: pointer;
-  transition: color 0.3s;
-}
-.product__description button:hover {
-  color: rgba(146, 161, 52, 1); // Цвет, как у кнопки "Add to cart"
-}
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
 
-.product__description strong {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 130%;
-  color: rgba(66, 68, 54, 1);
-}
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(66, 68, 54, 1);
 
-.product__description p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
-  color: rgba(66, 68, 54, 1);
-}
-
-.product__description button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  text-decoration: underline;
-  text-decoration-style: solid;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  button {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    border: none;
+    background: none;
+    color: rgba(66, 68, 54, 1);
+  }
 }

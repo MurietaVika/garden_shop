@@ -16,18 +16,18 @@ import Category from "./category/Category";
 const App = () => {
   return (
     <div>
-      <BrowserRouter> 
+      <BrowserRouter>
         <Header/>
-          <Nav />  
-              <Routes> 
+          <Nav />
+              <Routes>
                   <Route path="/" index element={<Home/>} />
-                  <Route path="/categories" element={<Categories />} />  
+                  <Route path="/categories" element={<Categories />} />
                   <Route path="/categories/:id" element={<Category />} />
                   <Route path="/products" element={<AllProducts />} />
                   <Route path="/product/:id" element={<Product />} />
                   <Route path="/cart" element={<Cart />} />
-                  <Route path="/notFound" element={<NotFound />} /> 
-                  <Route path="/allSale" element={<AllSale />} /> 
+                  <Route path="*" element={<NotFound />} />
+                  <Route path="/allSale/:discount?" element={<AllSale />} />
               </Routes>
         <Footer/>
       </BrowserRouter>
@@ -36,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+

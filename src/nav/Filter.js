@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './filter.scss';
 import { FaChevronDown } from 'react-icons/fa';
+import { useLocation } from "react-router-dom";
 
 const Filter = ({
                     minPrice, setMinPrice,
@@ -8,6 +9,8 @@ const Filter = ({
                     discountOnly, setDiscountOnly,
                 }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const location = useLocation();
 
     return (
         <div className="filter">
@@ -29,16 +32,18 @@ const Filter = ({
             </div>
 
             {/* Фильтр по скидке */}
-            <div className="filter__discount">
-                <label>
-                    Discounted items
+            {location.pathname !== "/allSale" && (
+                <div className="filter__discount">
+                    <label>Discounted items</label>
                     <input
                         type="checkbox"
                         checked={discountOnly}
                         onChange={() => setDiscountOnly(!discountOnly)}
+                        className="filter__discount-checkbox"
                     />
-                </label>
-            </div>
+                </div>
+            )}
+
 
             {/* Кастомная кнопка сортировки */}
             <div className="filter__sort">

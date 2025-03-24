@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
-}
+  gap: 40px;
 
-input[type="number"] {
-  -moz-appearance: textfield; /* Для Firefox */
+  @media (max-width: 768px) {
+      flex-wrap: wrap; // Разрешаем перенос на новую строку
+      justify-content: flex-start; // Оставляем элементы прижатые влево
+    }
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -22,23 +23,22 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .filter__price h2 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 130%;
   color: rgba(66, 68, 54, 1);
 }
 
 .filter__price input {
-  width: 112px;
-  height: 36px;
   padding: 8px 16px;
   border: 1px solid rgba(221, 221, 221, 1);
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #333;
   border-radius: 5px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 input::placeholder {
@@ -48,31 +48,38 @@ input::placeholder {
 
 .filter__discount {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
-  font-family: 'Montserrat', sans-serif;
+}
+
+.filter__discount label {
   font-weight: 600;
   font-size: 20px;
-  line-height: 130%;
-  white-space: nowrap; /* Запрещаем перенос текста */
   color: rgba(66, 68, 54, 1);
 }
 
+.filter__discount input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.5); // Увеличиваем чекбокс
+  cursor: pointer;
+  border: 1px solid rgba(221, 221, 221, 1);
+  appearance: none;
+  border-radius: 5px;
+}
 
 .filter__sort {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 10px;
 
 }
 
 .filter__sort label {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 20px;
   color: rgba(66, 68, 54, 1);
@@ -85,10 +92,9 @@ input::placeholder {
   border: 1px solid rgba(221, 221, 221, 1);
   padding: 8px 16px;
   background-color: white;
-  color: rgba(221, 221, 221, 1);
+  color: rgba(66, 68, 54, 1);
   cursor: pointer;
   transition: background 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 126%;
