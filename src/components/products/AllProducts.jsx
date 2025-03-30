@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import './allProducts.scss';
 import Filter from '../../nav/Filter';
 import Container from "../container/Container";
@@ -7,6 +7,7 @@ import Container from "../container/Container";
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const navigate = useNavigate();
 
     // Фильтры
     const [minPrice, setMinPrice] = useState('');
@@ -20,13 +21,9 @@ const AllProducts = () => {
                 const response = await fetch("http://localhost:3333/products/all");
                 const result = await response.json();
 
-                console.log("Все продукты:", result); // Посмотрим, что реально приходит
-
-                // Если result - массив, сразу устанавливаем его
                 if (Array.isArray(result)) {
                     setProducts(result);
                 }
-                // Если API возвращает объект с массивом внутри
                 else if (result.data && Array.isArray(result.data)) {
                     setProducts(result.data);
                 }
@@ -83,7 +80,7 @@ const AllProducts = () => {
                                         </div>
                                     )}
                                     <img src={`http://localhost:3333${product.image}`} alt={product.title} className="product__image" />
-                                    <Link to="/cart" className="product__button">Add to cart</Link>
+                                    <button className="product__button" onClick={() => navigate('/cart')}>Add to cart</button>
                                 </div>
                                 <div className="product__title-wrapper">
                                     <h3 className="product__title">{product.title}</h3>
@@ -105,7 +102,7 @@ const AllProducts = () => {
                         <p className="allProducts__empty">Товары не найдены</p>
                     )}
                 </div>
-            </Container> {/* Здесь закрываем контейнер правильно */}
+            </Container>
         </div>
     );
 };

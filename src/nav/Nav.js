@@ -3,11 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import './nav.scss';  
 import Breadcrumbs from "./Breadcrumbs";
 
-
-
-
-
-
 const Nav = () => {
     return (
         <div className="nav_container">

@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 const AllSale = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const dispatch = useDispatch(); // ✅ Добавляем useDispatch
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -106,7 +106,7 @@ const AllSale = () => {
                             </Link>
                         ))
                     ) : (
-                        <p>Нет товаров со скидкой</p>
+                        <p>There are no discounted products</p>
                     )}
                 </div>
             </Container>

@@ -13,7 +13,6 @@
     margin: 0 auto 40px;
 }
 
-/* Контейнер */
 .footer__content {
     display: flex;
     flex-direction: column;
@@ -25,7 +24,7 @@
 
 .footer__info {
     display: grid;
-    grid-template-columns: 780px 548px; /* На мобильных устройствах одна колонка */
+    grid-template-columns: 780px 548px;
     gap: 20px;
 }
 
@@ -35,7 +34,7 @@
     padding: 24px;
     background: #F2F6D3;
     text-align: left;
-    border-radius: 8px; /* Первая колонка */
+    border-radius: 8px;
 }
 
 .footer__social,
@@ -43,7 +42,7 @@
     padding: 24px;
     background: #F2F6D3;
     text-align: left;
-    border-radius: 8px; /* Вторая колонка */
+    border-radius: 8px;
 }
 
 .footer__contact,
@@ -113,7 +112,6 @@
     border: none;
 }
 
-/* Адаптация */
 @media (max-width: 1024px) {
     .footer__info {
         grid-template-columns: 1fr 1fr;

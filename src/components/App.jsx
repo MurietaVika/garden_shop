@@ -9,9 +9,9 @@ import NotFound from "./notFound/NotFound";
 import AllSale from "./allSale/AllSale";
 import Nav from './../nav/Nav';
 import Footer from "./../footer/Footer";
-import "./app.scss";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Category from "./category/Category";
+import EmptyCart from "./cart/EmptyCart";
 
 const App = () => {
   return (

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .allProducts__title {
   font-size: 32px;
   font-weight: 700;
@@ -107,7 +106,6 @@
   color: rgb(66, 68, 54);
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .allProducts__products {
     grid-template-columns: repeat(4, 1fr);

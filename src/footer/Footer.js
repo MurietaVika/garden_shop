@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.scss";
 import instagram from "../assets/footer/ic-instagram.png";
-import whatsap from "../assets/footer/ic-whatsapp.png";
+import whatsapp from "../assets/footer/ic-whatsapp.png";
 import { Link } from "react-router-dom";
 import Container from "../components/container/Container";
 
@@ -23,7 +23,7 @@ const Footer = () => {
                           <img src={instagram} alt="Instagram" className="footer__social-icon"/>
                       </Link>
                       <Link className="footer__social-link">
-                          <img src={whatsap} alt="WhatsApp" className="footer__social-icon"/>
+                          <img src={whatsapp} alt="WhatsApp" className="footer__social-icon"/>
                       </Link>
                   </div>
               </div>

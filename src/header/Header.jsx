@@ -6,16 +6,14 @@ import "./header.scss";
 import { useSelector } from 'react-redux';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для управления меню
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); // Переключаем состояние меню
+        setIsMenuOpen(!isMenuOpen);
     };
 
-    // Получаем данные корзины из Redux
     const cartItems = useSelector((state) => state.cart.items);
 
-    // Вычисляем общее количество товаров в корзине
     const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
     return (

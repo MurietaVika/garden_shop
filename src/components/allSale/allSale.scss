@@ -32,7 +32,6 @@
   position: relative;
   overflow: hidden;
 
-
   &__image-wrapper {
     position: relative;
     width: 100%;
@@ -77,7 +76,6 @@
     padding: 16px 32px;
     border-radius: 5px;
     text-decoration: none;
-
   }
 
   &:hover &__button {
@@ -124,10 +122,9 @@
   }
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .allSale__products {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

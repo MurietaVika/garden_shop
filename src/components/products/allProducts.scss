@@ -57,8 +57,6 @@
     max-width: 100%;
     height: auto;
     border-bottom-width: 1px;
-
-
   }
 
   &__button {
@@ -79,7 +77,6 @@
     padding: 16px 32px;
     border-radius: 5px;
     text-decoration: none;
-
   }
 
   &:hover &__button {
@@ -126,7 +123,6 @@
   }
 }
 
-/* Адаптивность */
 @media (max-width: 1024px) {
   .allProducts__products {
     grid-template-columns: repeat(4, 1fr);

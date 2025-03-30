@@ -109,7 +109,7 @@
   gap: 32px;
   position: relative;
   max-width: 100%;
-  overflow: hidden;
+
 
   @media (max-width: 1024px) {
     gap: 20px;
@@ -124,7 +124,7 @@
   }
 
   @media (max-width: 360px) {
-    width: 100%;
+    gap: 2px;
   }
 }
 
@@ -149,8 +149,17 @@
   border-style: solid;
   border-color: rgba(221, 221, 221, 1);
 
+  @media (max-width: 1024px) {
+    height: 230px;
+  }
+
   @media (max-width: 480px) {
-    width: auto;
+    max-width: 180px;
+  }
+
+  @media (max-width: 360px) {
+    max-width: 116px;
+    height: auto;
   }
 }
 
@@ -191,6 +200,10 @@
   @media (max-width: 480px) {
     font-size: 18px;
   }
+
+  @media (max-width: 360px) {
+    width: 80%;
+  }
 }
 
 .cart-item-details {
@@ -203,6 +216,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 20px;
   }
 
   @media (max-width: 768px) {
@@ -235,16 +249,20 @@
     min-width: 48px;
     font-size: 24px;
   }
-}
-
-.cart-item-price {
-
+  @media (max-width: 480px) {
+    max-width: 38px;
+    max-height: 42px;
+  }
 }
 
 .price-new {
   font-weight: 700;
   font-size: 64px;
   color: rgba(66, 68, 54, 1);
+
+  @media (max-width: 1024px) {
+    font-size: 58px;
+  }
 
   @media (max-width: 768px) {
     font-size: 48px;
@@ -262,6 +280,10 @@
   color: rgba(139, 139, 139, 1);
   padding-left: 20px;
   padding-top: 22px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
 
   @media (max-width: 768px) {
     font-size: 32px;
@@ -401,6 +423,19 @@
     margin-top: 32px;
   }
 }
+
+.error-input {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+  outline: none;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 
 /* Затемнение фона */
 .overlay {

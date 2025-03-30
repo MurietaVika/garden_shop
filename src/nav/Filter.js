@@ -30,7 +30,6 @@ const Filter = ({
                     placeholder="to"
                 />
             </div>
-
             {/* Фильтр по скидке */}
             {location.pathname !== "/allSale" && (
                 <div className="filter__discount">
@@ -43,8 +42,6 @@ const Filter = ({
                     />
                 </div>
             )}
-
-
             {/* Кастомная кнопка сортировки */}
             <div className="filter__sort">
                 <label>Sorted</label>

@@ -1,6 +1,6 @@
 .home {
   @media (max-width: 768px) {
-width: 95%;
+    width: 95%;
   }
 }
 
@@ -171,6 +171,8 @@ width: 95%;
   @media (max-width: 360px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -206,7 +208,7 @@ width: 95%;
   max-width: 250px;
 
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -222,7 +224,7 @@ width: 95%;
   }
 
   @media (max-width: 480px) {
-    width: 80%;
+    max-width: 180px;
   }
 }
 
@@ -330,7 +332,12 @@ width: 95%;
 
     @media (max-width: 480px) {
       padding: 12px 24px;
-      font-size: 16px;
+      font-size: 24px;
+    }
+
+    @media (max-width: 360px) {
+      padding: 12px 24px;
+      font-size: 18px;
     }
 
     &::placeholder {
@@ -356,7 +363,12 @@ width: 95%;
     border-radius: 5px;
 
     @media (max-width: 480px) {
-      font-size: 14px;
+      font-size: 27px;
+      padding: 20px 72px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 17px;
       padding: 20px 72px;
     }
 

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .breadcrumbs {
   display: flex;
   font-size: 14px;
@@ -12,7 +11,7 @@
 }
 
 .breadcrumb-button {
-  text-decoration: none; /* Убираем подчёркивание */
+  text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   height: 36px;
   border: 1px solid rgb(221, 221, 221);
@@ -24,24 +23,23 @@
   background-color: transparent;
   text-align: center;
   display: inline-block;
-  padding: 0 12px; /* padding, чтобы кнопки были одинаковыми */
+  padding: 0 12px;
 }
 .breadcrumb-button:hover {
-  transform: translateY(-2px); /* Эффект поднятия */
+  transform: translateY(-2px);
 }
 .breadcrumb-button:active {
-  transform: translateY(0); /* Эффект нажатия */
+  transform: translateY(0);
 }
 
-/* Добавление разделителей между кнопками */
 .breadcrumbs span {
   display: inline-block;
-  margin-right: 8px; /* Отступ между кнопками */
+  margin-right: 8px;
 }
 
 .breadcrumbs .breadcrumb-button + span::before {
-  content: " - "; /* Черта между кнопками */
-  color: rgb(221, 221, 221); /* Цвет черты */
+  content: " - ";
+  color: rgb(221, 221, 221);
 }
 
 /*# sourceMappingURL=breadcrumbs.css.map */

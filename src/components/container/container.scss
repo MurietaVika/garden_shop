@@ -1,9 +1,9 @@
 .container {
-  max-width: 1360px; // Ширина контейнера
+  max-width: 1360px;
   width: 100%;
-  margin: 0 auto; // Центрирование
-  padding: 0 20px; // Отступы от краев экрана
-
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 
   @media (max-width: 1024px) {
     max-width: 960px;

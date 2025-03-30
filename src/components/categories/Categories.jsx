@@ -5,7 +5,7 @@ import fertizer from "../../assets/category/fertizer.png";
 import listic from "../../assets/category/listic.png";
 import pochva from "../../assets/category/pochva.png";
 import lopata from "../../assets/category/lopata.png";
-import tool from "../../assets/category/tool..png";
+import tool from "../../assets/category/tool.png";
 import Container from "../container/Container";
 
 const Categories = () => {

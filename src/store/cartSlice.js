@@ -9,7 +9,6 @@ const loadDiscountsFromStorage = () => {
     return savedDiscounts ? JSON.parse(savedDiscounts) : [];
 };
 
-
 const cartSlice = createSlice({
     name: "cart",
     initialState: {
@@ -18,8 +17,6 @@ const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action) => {
             const item = action.payload;
-            console.log("Товар в addToCart:", item);
-
             const existingItem = state.items.find((i) => i.id === item.id);
             const savedItem = loadDiscountsFromStorage().find((i) => i.id === item.id);
 
@@ -28,13 +25,10 @@ const cartSlice = createSlice({
             } else {
                 const newItem = {
                     ...item,
-                    discont_price: savedItem?.discont_price ?? item.discont_price ?? item.price, // ✅ Исправленный код
+                    discont_price: savedItem?.discont_price ?? item.discont_price ?? item.price,
                 };
-                console.log("Добавляем в Redux:", newItem);
                 state.items.push(newItem);
             }
-
-            console.log("Состояние корзины после добавления:", state.items);
             localStorage.setItem("cart", JSON.stringify(state.items));
         },
 

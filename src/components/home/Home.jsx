@@ -7,7 +7,7 @@ import listic from "../../assets/category/listic.png";
 import pochva from "../../assets/category/pochva.png";
 import lopata from "../../assets/category/lopata.png";
 import product from "../../assets/discountProduct.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Container from "../container/Container";
 
 // Функция для получения категорий с товарами
@@ -60,7 +60,6 @@ const getDiscountedProducts = (categories) => {
 };
 
 export default function MainPages() {
-  const navigate = useNavigate();
   const [discountedProducts, setDiscountedProducts] = useState([]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -72,7 +71,6 @@ export default function MainPages() {
 
       // Выбираем по одному товару со скидкой из каждой категории
       const products = getDiscountedProducts(categories);
-      console.log("Товары со скидкой:", products);
 
       // Сохраняем выбранные товары
       setDiscountedProducts(products);
