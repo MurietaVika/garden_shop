@@ -505,10 +505,40 @@
   font-size: 40px;
   color: white;
 }
+@media (max-width: 480px) {
+  .modal h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 360px) {
+  .modal h3 {
+    font-size: 28px;
+  }
+}
 .modal p {
   font-weight: 600;
   font-size: 20px;
   color: white;
+}
+@media (max-width: 480px) {
+  .modal p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1024px) {
+  .modal {
+    top: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .modal {
+    top: 45%;
+  }
+}
+@media (max-width: 360px) {
+  .modal {
+    top: 65%;
+  }
 }
 
 /* Крестик для закрытия */
