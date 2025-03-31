@@ -4,6 +4,7 @@ import imgCart from "../assets/img/Cart.png";
 import { Link } from 'react-router-dom';
 import "./header.scss";
 import { useSelector } from 'react-redux';
+import Container from "../components/container/Container";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,9 @@ const Header = () => {
     const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
-        <header className="header">
+        <header>
+            <Container>
+                <div className="header">
             <div className="header__logo">
                 <img src={img} alt="logo" />
             </div>
@@ -86,6 +89,8 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
+                </div>
+            </Container>
         </header>
     );
 };

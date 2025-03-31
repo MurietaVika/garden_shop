@@ -1,10 +1,4 @@
 @charset "UTF-8";
-@media (max-width: 768px) {
-  .home {
-    width: 95%;
-  }
-}
-
 .home__banner {
   width: 100%;
   position: relative;
@@ -212,7 +206,11 @@
 }
 
 .categories-item {
+  display: flex;
   text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__categories-text {
