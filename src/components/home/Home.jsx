@@ -38,7 +38,6 @@ const fetchCategories = async () => {
   }
 };
 
-// Функция для выбора товаров со скидкой
 const getDiscountedProducts = (categories) => {
   const discountedProducts = [];
 
@@ -80,7 +79,7 @@ export default function MainPages() {
   }, []);
 
   const handleOrderClick = (e) => {
-    e.preventDefault(); // Предотвращаем отправку формы
+    e.preventDefault();
     setIsModalOpen(true);
   };
 

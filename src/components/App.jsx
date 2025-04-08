@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./../header/Header";
+import Header from "../pages/header/Header";
 import Home from "./home/Home";
 import Categories from "./categories/Categories";
 import AllProducts from "./products/AllProducts";
@@ -7,11 +7,10 @@ import Product from "./product/Product";
 import Cart from "./cart/Cart";
 import NotFound from "./notFound/NotFound";
 import AllSale from "./allSale/AllSale";
-import Nav from './../nav/Nav';
-import Footer from "./../footer/Footer";
+import Nav from '../pages/nav/Nav';
+import Footer from "../pages/footer/Footer";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Category from "./category/Category";
-import EmptyCart from "./cart/EmptyCart";
 
 const App = () => {
   return (

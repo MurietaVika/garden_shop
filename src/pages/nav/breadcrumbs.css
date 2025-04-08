@@ -2,7 +2,6 @@
   display: flex;
   font-size: 14px;
   color: rgb(221, 221, 221);
-  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 480px) {
   .breadcrumbs {
@@ -35,11 +34,6 @@
 .breadcrumbs span {
   display: inline-block;
   margin-right: 8px;
-}
-
-.breadcrumbs .breadcrumb-button + span::before {
-  content: " - ";
-  color: rgb(221, 221, 221);
 }
 
 /*# sourceMappingURL=breadcrumbs.css.map */

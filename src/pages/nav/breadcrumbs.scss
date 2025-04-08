@@ -2,7 +2,6 @@
     display: flex;
     font-size: 14px;
     color: rgba(221, 221, 221, 1);
-    font-family: 'Montserrat', sans-serif;
 
     @media (max-width: 480px) {
         display: none;
@@ -37,9 +36,6 @@
     margin-right: 8px;
 }
 
-.breadcrumbs .breadcrumb-button + span::before {
-    content: " - ";
-    color: rgba(221, 221, 221, 1);
-}
+
 
 

@@ -83,6 +83,8 @@
   padding: 32px 0;
   margin-bottom: 32px;
   align-items: start;
+  font-weight: 700;
+  font-size: 64px;
 }
 @media (max-width: 360px) {
   .price__product {
@@ -134,7 +136,7 @@
   border-radius: 5px;
   max-width: 63px;
   margin-left: 200px;
-  margin-top: -70px;
+  margin-top: -80px;
   text-align: center;
 }
 @media (max-width: 1024px) {
@@ -221,7 +223,7 @@
   vertical-align: middle;
   color: white;
   border: none;
-  width: 100%;
+  width: 80%;
 }
 @media (max-width: 1024px) {
   .product__cart-btn {

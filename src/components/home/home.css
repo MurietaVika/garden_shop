@@ -537,6 +537,7 @@
   display: flex;
   justify-content: start;
   align-items: start;
+  margin-top: auto;
 }
 @media (max-width: 480px) {
   .home__sale-price {

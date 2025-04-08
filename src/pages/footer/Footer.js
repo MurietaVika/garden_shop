@@ -1,9 +1,9 @@
 import React from "react";
 import "./footer.scss";
-import instagram from "../assets/footer/ic-instagram.png";
-import whatsapp from "../assets/footer/ic-whatsapp.png";
+import instagram from "../../assets/footer/ic-instagram.png";
+import whatsapp from "../../assets/footer/ic-whatsapp.png";
 import { Link } from "react-router-dom";
-import Container from "../components/container/Container";
+import Container from "../../components/container/Container";
 
 const Footer = () => {
   return (

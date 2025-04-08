@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import './category.scss';
-import Filter from '../../nav/Filter';
+import Filter from '../../pages/nav/Filter';
 import Container from "../container/Container";
 
 const categoryNames = {

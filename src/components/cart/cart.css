@@ -286,8 +286,8 @@
 }
 
 .price-new {
-  font-weight: 700;
-  font-size: 64px;
+  font-weight: 600;
+  font-size: 40px;
   color: rgb(66, 68, 54);
 }
 @media (max-width: 1024px) {
@@ -308,7 +308,7 @@
 
 .price-old {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 20px;
   text-decoration: line-through;
   color: rgb(139, 139, 139);
   padding-left: 20px;
