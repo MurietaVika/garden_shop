@@ -93,7 +93,7 @@ const AllSale = () => {
                                     <h3 className="product__title">{product.title}</h3>
                                 </div>
 
-                                <div className="product__price">
+                                <div className="product__price_sale">
                                     {product.discont_price ? (
                                         <>
                                             <p className="product__price--new">${product.discont_price}</p>

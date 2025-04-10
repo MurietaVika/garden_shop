@@ -83,24 +83,25 @@
   text-align: center;
   height: 50px;
 }
-.product__price {
+.product__price_all {
   display: flex;
   justify-content: start;
   align-items: start;
+  padding-left: 20px;
 }
-.product__price--new {
+.product__price_all--new {
   color: rgb(66, 68, 54);
   font-size: 40px;
   font-weight: 600;
 }
-.product__price--old {
+.product__price_all--old_all {
   color: rgb(139, 139, 139);
   font-size: 20px;
   text-decoration: line-through;
   padding-top: 40px;
   padding-left: 16px;
 }
-.product__price--regular {
+.product__price_all--regular_all {
   font-size: 40px;
   font-weight: 600;
   color: rgb(66, 68, 54);

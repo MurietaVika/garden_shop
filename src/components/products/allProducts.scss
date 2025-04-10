@@ -96,10 +96,11 @@
     height: 50px;
   }
 
-  &__price {
+  &__price_all {
     display: flex;
     justify-content: start;
     align-items: start;
+    padding-left: 20px;
 
     &--new {
       color: rgba(66, 68, 54, 1);
@@ -107,7 +108,7 @@
       font-weight: 600;
     }
 
-    &--old {
+    &--old_all {
       color: rgba(139, 139, 139, 1);
       font-size: 20px;
       text-decoration: line-through;
@@ -115,7 +116,7 @@
       padding-left: 16px;
     }
 
-    &--regular {
+    &--regular_all {
       font-size: 40px;
       font-weight: 600;
       color: rgba(66, 68, 54, 1);

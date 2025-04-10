@@ -22,11 +22,21 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 480px) {
+  .filter__price {
+    width: 90%;
+  }
+}
 
 .filter__price h2 {
   font-weight: 600;
   font-size: 20px;
   color: rgb(66, 68, 54);
+}
+@media (max-width: 480px) {
+  .filter__price h2 {
+    font-size: 18px;
+  }
 }
 
 .filter__price input {

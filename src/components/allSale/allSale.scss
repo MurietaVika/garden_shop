@@ -95,10 +95,11 @@
     height: 50px;
   }
 
-  &__price {
+  &__price_sale {
     display: flex;
     justify-content: start;
     align-items: start;
+    padding-left: 20px;
 
     &--new {
       color: rgba(66, 68, 54, 1);

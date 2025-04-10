@@ -9,21 +9,10 @@ const AllProducts = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const navigate = useNavigate();
 
-    // products — массив всех товаров, загруженных с сервера.
-    // setProducts — функция для обновления списка товаров
-    // filteredProducts — массив товаров, отфильтрованных по заданным критериям.
-    // setFilteredProducts — функция для обновления отфильтрованного списка.
-    // navigate — хук из react-router-dom, который позволяет программно менять URL.
-
-    // Фильтры
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [discountOnly, setDiscountOnly] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-
-    // minPrice / maxPrice — границы цен для фильтрации.
-    // discountOnly — фильтр по скидкам (если true, показываются только товары со скидкой).
-    // searchQuery — строка поиска по названию или другим параметрам.
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -48,19 +37,6 @@ const AllProducts = () => {
         fetchProducts();
     }, []);
 
-    // Функция загрузки товаров с сервера
-    // useEffect(..., []) — выполняется один раз при монтировании компонента.
-    // fetchProducts — асинхронная функция для получения данных с API.
-    // await fetch("http://localhost:3333/products/all") — делаем запрос к серверу.
-    // await response.json() — парсим JSON-ответ.
-    // Проверяем структуру ответа:
-    // Если пришёл массив, сразу сохраняем в products.
-    // Если пришёл объект с ключом data, берём массив из него.
-    // Если структура неожиданная — выбрасываем ошибку.
-    // Обрабатываем ошибки — если сервер не отвечает или вернул неправильные данные, выводим в консоль.
-
-
-    // Фильтрация товаров
     useEffect(() => {
         let filtered = products;
 
@@ -107,7 +83,7 @@ const AllProducts = () => {
                                     <h3 className="product__title">{product.title}</h3>
                                 </div>
 
-                                <div className="product__price">
+                                <div className="product__price_all">
                                     {product.discont_price ? (
                                         <>
                                             <p className="product__price--new">${product.discont_price}</p>
