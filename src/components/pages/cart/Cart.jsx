@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./cart.scss";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { decreaseQuantity, addToCart, removeFromCart } from "../../store/cartSlice";
-import Container from "../container/Container";
+import { decreaseQuantity, addToCart, removeFromCart } from "../../../features/cartSlice";
+import Container from "../../elements/container/Container";
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {

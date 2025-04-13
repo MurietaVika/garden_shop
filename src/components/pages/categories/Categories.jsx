@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./categories.scss";
-import fertizer from "../../assets/category/fertizer.png";
-import listic from "../../assets/category/listic.png";
-import pochva from "../../assets/category/pochva.png";
-import lopata from "../../assets/category/lopata.png";
-import tool from "../../assets/category/tool.png";
-import Container from "../container/Container";
+import fertizer from "../../../assets/category/fertizer.png";
+import listic from "../../../assets/category/listic.png";
+import pochva from "../../../assets/category/pochva.png";
+import lopata from "../../../assets/category/lopata.png";
+import tool from "../../../assets/category/tool.png";
+import Container from "../../elements/container/Container";
 
 const Categories = () => {
 

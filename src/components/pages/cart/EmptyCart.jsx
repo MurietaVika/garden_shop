@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import "./emptyCart.scss";
-import Container from "../container/Container";
+import Container from "../../elements/container/Container";
 
 const EmptyCart = () => {
     const navigate = useNavigate();

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import img from "../../assets/img/logo.png";
-import imgCart from "../../assets/img/Cart.png";
+import img from "../../../assets/img/logo.png";
+import imgCart from "../../../assets/img/Cart.png";
 import { Link } from 'react-router-dom';
 import "./header.scss";
 import { useSelector } from 'react-redux';
-import Container from "../../components/container/Container";
+import Container from "../container/Container";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

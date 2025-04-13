@@ -1,52 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import './category.scss';
-import Filter from '../../pages/nav/Filter';
-import Container from "../container/Container";
+import { Link, useNavigate} from 'react-router-dom';
+import './allProducts.scss';
+import Filter from '../../elements/nav/Filter';
+import Container from "../../elements/container/Container";
 
-const categoryNames = {
-    1: "Fertilizer",
-    2: "Protective products",
-    3: "Planting material",
-    4: "Tools and equipment",
-    5: "Pots and planters"
-};
-
-const Category = () => {
-    const { id } = useParams();
-    const numericId = Number(id);
-    const categoryName = categoryNames[numericId];
-    const navigate = useNavigate();
-
+const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const navigate = useNavigate();
+
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
     const [discountOnly, setDiscountOnly] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-        if (!categoryName) return;
-
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`http://localhost:3333/categories/${numericId}`);
+                const response = await fetch("http://localhost:3333/products/all");
                 const result = await response.json();
 
-                if (result.status === "ERR") {
-                    console.error("Ошибка API:", result.message);
-                    setProducts([]);
-                    return;
+                if (Array.isArray(result)) {
+                    setProducts(result);
                 }
-
-                setProducts(result.data || []);
+                else if (result.data && Array.isArray(result.data)) {
+                    setProducts(result.data);
+                }
+                else {
+                    throw new Error("Ожидался массив товаров, но API вернул другое");
+                }
             } catch (error) {
-                console.error("Ошибка загрузки:", error);
+                console.error("Ошибка загрузки всех товаров:", error);
             }
         };
 
         fetchProducts();
-    }, [numericId, categoryName]);
+    }, []);
 
     useEffect(() => {
         let filtered = products;
@@ -59,20 +48,25 @@ const Category = () => {
                 product.title.toLowerCase().includes(searchQuery.toLowerCase())
             );
         }
+
         setFilteredProducts(filtered);
     }, [minPrice, maxPrice, discountOnly, searchQuery, products]);
 
     return (
-        <div className="category">
+        <div className="allProducts">
             <Container>
-                <h2 className="category__title">{categoryName}</h2>
+                <h2 className="allProducts__title">All products</h2>
+
+                {/* Фильтры */}
                 <Filter
                     minPrice={minPrice} setMinPrice={setMinPrice}
                     maxPrice={maxPrice} setMaxPrice={setMaxPrice}
                     discountOnly={discountOnly} setDiscountOnly={setDiscountOnly}
                     searchQuery={searchQuery} setSearchQuery={setSearchQuery}
                 />
-                <div className="category__products">
+
+                {/* Список товаров */}
+                <div className="allProducts__products">
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <Link to={`/product/${product.id}`} key={product.id} className="product">
@@ -88,7 +82,8 @@ const Category = () => {
                                 <div className="product__title-wrapper">
                                     <h3 className="product__title">{product.title}</h3>
                                 </div>
-                                <div className="product__price">
+
+                                <div className="product__price_all">
                                     {product.discont_price ? (
                                         <>
                                             <p className="product__price--new">${product.discont_price}</p>
@@ -101,7 +96,7 @@ const Category = () => {
                             </Link>
                         ))
                     ) : (
-                        <p className="category__empty">Товары не найдены</p>
+                        <p className="allProducts__empty">Товары не найдены</p>
                     )}
                 </div>
             </Container>
@@ -109,5 +104,4 @@ const Category = () => {
     );
 };
 
-export default Category;
-
+export default AllProducts;

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./notFound.scss";
-import notFound from "../../assets/404.png"
-import Container from "../container/Container";
+import notFound from "../../../assets/404.png"
+import Container from "../../elements/container/Container";
 import {Link} from "react-router-dom";
 
 const NotFound = () => {

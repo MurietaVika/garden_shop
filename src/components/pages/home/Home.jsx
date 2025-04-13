@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./home.scss";
 import axios from "axios";
-import banner from "../../assets/banner.jpg";
-import fertizer from "../../assets/category/fertizer.png";
-import listic from "../../assets/category/listic.png";
-import pochva from "../../assets/category/pochva.png";
-import lopata from "../../assets/category/lopata.png";
-import product from "../../assets/discountProduct.png";
+import banner from "../../../assets/banner.jpg";
+import fertizer from "../../../assets/category/fertizer.png";
+import listic from "../../../assets/category/listic.png";
+import pochva from "../../../assets/category/pochva.png";
+import lopata from "../../../assets/category/lopata.png";
+import product from "../../../assets/discountProduct.png";
 import { Link } from "react-router-dom";
-import Container from "../container/Container";
+import Container from "../../elements/container/Container";
 
 // Функция для получения категорий с товарами
 const fetchCategories = async () => {

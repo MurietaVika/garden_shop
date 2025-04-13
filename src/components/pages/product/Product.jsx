@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './product.scss';
-import { addToCart } from "../../store/cartSlice";
+import { addToCart } from "../../../features/cartSlice";
 import { useDispatch } from "react-redux";
-import Container from "../container/Container";
+import Container from "../../elements/container/Container";
 
 const Product = () => {
     const { id } = useParams();

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./allSale.scss";
 import { Link } from "react-router-dom";
-import Container from "../container/Container";
-import Filter from "../../pages/nav/Filter";
-import { addToCart } from "../../store/cartSlice";
+import Container from "../../elements/container/Container";
+import Filter from "../../elements/nav/Filter";
+import { addToCart } from "../../../features/cartSlice";
 import { useDispatch } from "react-redux";
 
 const AllSale = () => {
